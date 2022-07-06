@@ -11,6 +11,10 @@ class NumberNode:
 class AddNode:
 	node_a: any
 	node_b: any
+	
+	# this needs to be implemented for all nodes that can be tree root
+	def eval(self):
+		return self.node_a.value + self.node_b.value
 
 	def __repr__(self):
 		return f"({self.node_a}+{self.node_b})"
@@ -19,6 +23,10 @@ class AddNode:
 class SubtractNode:
 	node_a: any
 	node_b: any
+
+	# this needs to be implemented for all nodes that can be tree root
+	def eval(self):
+		return self.node_a.value - self.node_b.value
 
 	def __repr__(self):
 		return f"({self.node_a}-{self.node_b})"
